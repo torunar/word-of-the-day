@@ -43,6 +43,8 @@
 
     /**
      * Renders HTML card into the canvas.
+     *
+     * @param {function} postRenderCallback Callback to execute after the canvas is drawn
      */
     function renderFormCanvas(postRenderCallback) {
 
