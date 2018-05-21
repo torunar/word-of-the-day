@@ -195,13 +195,22 @@
                    id="word_input"
                    name="word"
             />
-            <input type="submit"
-                   class="config__form__input"
-                   value="→"
-            />
+            <button type="submit"
+                    class="config__form__input config__form__input--button"
+                    title="Preview"
+            ><i class="lnr lnr-eye"></i></button>
+            <a type="button"
+               class="config__form__input config__form__input--button"
+               id="download"
+               href="#"
+               data-download="{word}.png"
+               title="Download"
+            ><i class="lnr lnr-download"></i></a>
         </form>
     </div>
-    <div class="card">
+    <div class="card"
+         id="card"
+    >
         <div class="card__head">// слово дня</div>
         <div class="card__content">
             <div class="card__content__icon-holder">
@@ -213,6 +222,11 @@
                  id="word"
             ></div>
         </div>
+    </div>
+    <div class="render">
+        <canvas class="render_image"
+                id="card_image"
+        ></canvas>
     </div>
 </div>
 <script src="./script.js"

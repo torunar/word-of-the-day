@@ -9,13 +9,10 @@
     box-sizing: border-box;
 }
 
-.overlay {
+html {
     text-align: center;
     padding: 10px;
     background: #666;
-    position: absolute;
-    width: 100%;
-    height: 100%;
 }
 
 .config {
@@ -24,8 +21,15 @@
     &__form {
 
         &__input {
-            padding: 5px;
+            padding: 5px 10px;
             text-transform: uppercase;
+            vertical-align: top;
+            height: 40px;
+            line-height: 30px;
+            font-size: 1em;
+            display: inline-block;
+            border: 1px solid black;
+            box-shadow: none;
 
             &--icon {
                 width: 200px;
@@ -33,6 +37,13 @@
 
             &--word {
                 width: 300px;
+            }
+
+            &--button {
+                background: lightgrey;
+                text-decoration: none;
+                color: black;
+                font-size: 25px;
             }
         }
     }
@@ -78,4 +89,8 @@
             line-height: 120px;
         }
     }
+}
+
+.render {
+    display: none;
 }
