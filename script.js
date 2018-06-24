@@ -127,7 +127,7 @@
     function render(icon, word) {
         eIcon.className = eIcon.dataset.class.replace('{icon}', icon);
         eWord.innerText = word;
-        eDownload.download = eDownload.dataset.download.replace('{word}', word);
+        eDownload.download = eDownload.dataset.download.replace('{word}', word.toLowerCase());
 
         eIconField.value = icon;
         eWordField.value = word;
