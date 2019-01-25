@@ -1,4 +1,4 @@
-(function (eConfigForm, eCard, eIcon, eWord, eIconField, eWordField, eCardImage, eDownload) {
+(function (eConfigForm, eCard, eIcon, eWord, eIconField, eWordField, eCardImage, eDownload, eSandbox) {
 
     /** @var {HTMLFormElement} eConfigForm **/
     /** @var {HTMLDivElement} eCard **/
@@ -8,6 +8,7 @@
     /** @var {HTMLInputElement} eWordField **/
     /** @var {HTMLCanvasElement} eCardImage **/
     /** @var {HTMLButtonElement} eDownload **/
+    /** @var {HTMLDivElement} eSandbox **/
 
     /** @var {string} defaultIcon **/
     const defaultIcon = 'book';
@@ -131,6 +132,12 @@
 
         eIconField.value = icon;
         eWordField.value = word;
+
+        let activeIcon = Array.from(document.getElementsByClassName('sandbox__sample__icon')).filter(function(iconElement) {
+            iconElement.parentNode.className = iconElement.parentNode.className.replace(' sandbox__sample--active', '');
+            return iconElement.className.endsWith('lnr-' + icon);
+        })[0];
+        activeIcon.parentNode.className += ' sandbox__sample--active';
     }
 
     /**
@@ -204,6 +211,22 @@
         eDownload.click();
     }
 
+    function addIconSelectorHandler() {
+        let buttons = Array.from(eSandbox.getElementsByClassName('sandbox__sample'));
+        buttons.map(function (button) {
+            button.onclick = function (event) {
+                event.preventDefault();
+
+                let icon = button.getElementsByClassName('lnr')[0],
+                    iconClass = icon.className.replace('lnr-', '').replace('lnr', '').replace('sandbox__sample__icon', '').trim();
+
+                eIconField.value = iconClass;
+
+                renderFormHtml();
+            };
+        })
+    }
+
     /**
      * Main routine.
      *
@@ -214,6 +237,7 @@
         render(state.icon, state.word);
 
         addConfigFormHandler();
+        addIconSelectorHandler();
         addCardSaveHandler();
 
         return 0;
@@ -229,4 +253,5 @@
     document.getElementById('word_input'),
     document.getElementById('card_image'),
     document.getElementById('download'),
+    document.getElementById('sandbox'),
 );
