@@ -15,10 +15,50 @@ html {
     background: #666;
 }
 
+
+.column {
+    display: inline-block;
+
+    &--sandbox {
+        width: 270px;
+        margin-right: 25px;
+        max-height: 461.8px;
+        overflow-y: auto;
+    }
+
+    vertical-align: top;
+}
+
+.sandbox {
+    &__sample {
+        display: block;
+        float: left;
+        width: 40px;
+        height: 40px;
+        background-color: #fff;
+        margin: 0 5px 6.8px 5px;
+        border: 0;
+        text-transform: uppercase;
+
+        &--active {
+            background: darkseagreen;
+            color: white;
+        }
+
+        &__icon {
+            font-size: 25px;
+        }
+    }
+}
+
 .config {
-    margin-bottom: 40px;
+    margin-bottom: 6.8px;
 
     &__form {
+
+        &__controls {
+            float: right;
+        }
 
         &__input {
             padding: 5px 10px;
@@ -31,12 +71,8 @@ html {
             border: 1px solid black;
             box-shadow: none;
 
-            &--icon {
-                width: 200px;
-            }
-
             &--word {
-                width: 300px;
+                width: calc(100% - 100px);
             }
 
             &--button {
@@ -44,6 +80,9 @@ html {
                 text-decoration: none;
                 color: black;
                 font-size: 25px;
+                float: left;
+                width: 50px;
+                border-left: 0;
             }
         }
     }
@@ -92,31 +131,6 @@ html {
 
 .render {
     display: none;
-}
-
-.sandbox {
-    margin-top: 40px;
-
-    &__sample {
-        display: block;
-        float: left;
-        width: 50px;
-        height: 50px;
-        background-color: #fff;
-        margin: 0 5px 10px 5px;
-        padding: 5px;
-        border: 2px solid transparent;
-        text-transform: uppercase;
-
-        &--active {
-            background: darkseagreen;
-            color: white;
-        }
-
-        .lnr {
-            font-size: 35px;
-        }
-    }
 }
 
 .hidden {
