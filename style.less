@@ -2,137 +2,133 @@
 @import url('https://cdn.linearicons.com/free/1.0.0/icon-font.min.css');
 
 * {
-    padding: 0;
-    margin: 0;
-    line-height: 1;
-    border-collapse: collapse;
-    box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  line-height: 1;
+  border-collapse: collapse;
+  box-sizing: border-box;
 }
 
 html {
-    text-align: center;
-    padding: 10px;
-    background: #666;
+  text-align: center;
+  padding: 10px;
+  background: #666;
 }
 
 
 .column {
-    display: inline-block;
+  display: inline-block;
 
-    &--sandbox {
-        width: 270px;
-        margin-right: 25px;
-        max-height: 461.8px;
-        overflow-y: auto;
-    }
+  &--icons {
+    width: 270px;
+    margin-right: 25px;
+    max-height: 461.8px;
+    overflow-y: auto;
+  }
 
-    vertical-align: top;
+  vertical-align: top;
 }
 
-.sandbox {
-    &__sample {
-        display: block;
-        float: left;
-        width: 40px;
-        height: 40px;
-        background-color: #fff;
-        margin: 0 5px 6.8px 5px;
-        border: 0;
-        text-transform: uppercase;
+.icons {
+  &__selector {
+    display: block;
+    float: left;
+    width: 40px;
+    height: 40px;
+    background-color: #fff;
+    margin: 0 5px 6.8px 5px;
+    border: 0;
+    text-transform: uppercase;
 
-        &--active {
-            background: darkseagreen;
-            color: white;
-        }
-
-        &__icon {
-            font-size: 25px;
-        }
+    &--active {
+      background: darkseagreen;
+      color: white;
     }
+
+    &__icon {
+      font-size: 25px;
+    }
+  }
 }
 
 .config {
-    margin-bottom: 6.8px;
+  margin-bottom: 6.8px;
 
-    &__form {
+  &__form {
 
-        &__controls {
-            float: right;
-        }
-
-        &__input {
-            padding: 5px 10px;
-            text-transform: uppercase;
-            vertical-align: top;
-            height: 40px;
-            line-height: 30px;
-            font-size: 1em;
-            display: inline-block;
-            border: 1px solid black;
-            box-shadow: none;
-
-            &--word {
-                width: calc(100% - 100px);
-            }
-
-            &--button {
-                background: lightgrey;
-                text-decoration: none;
-                color: black;
-                font-size: 25px;
-                float: left;
-                width: 50px;
-                border-left: 0;
-            }
-        }
+    &__controls {
+      float: right;
     }
+
+    &__input {
+      padding: 5px 10px;
+      text-transform: uppercase;
+      vertical-align: top;
+      height: 40px;
+      line-height: 30px;
+      font-size: 1em;
+      display: inline-block;
+      border: 1px solid black;
+      box-shadow: none;
+
+      &--word {
+        width: calc(100% - 100px);
+      }
+
+      &--button {
+        background: lightgrey;
+        text-decoration: none;
+        color: black;
+        font-size: 25px;
+        float: left;
+        width: 50px;
+        border-left: 0;
+      }
+    }
+  }
 }
 
 .card {
-    height: 415px;
-    padding-left: 75px;
-    padding-right: 75px;
-    padding-top: 50px;
-    display: inline-block;
-    position: relative;
-    background: white;
-    text-transform: uppercase;
-    font-family: 'Montserrat', sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-align: left;
+  height: 415px;
+  padding-left: 75px;
+  padding-right: 75px;
+  padding-top: 50px;
+  display: inline-block;
+  position: relative;
+  background: white;
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: left;
 
-    &__head {
-        font-size: 30px;
+  &__head {
+    font-size: 30px;
+  }
+
+  &__content {
+    margin-top: 60px;
+
+    &__icon-holder {
+      height: 120px;
+      width: 120px;
+      float: left;
+      text-align: center;
     }
 
-    &__content {
-        margin-top: 60px;
-
-        &__icon-holder {
-            height: 120px;
-            width: 120px;
-            float: left;
-            text-align: center;
-        }
-
-        &__icon {
-            font-size: 120px;
-        }
-
-        &__word {
-            font-size: 80px;
-            margin-left: 170px;
-            padding-top: 20px; /* ? */
-            line-height: 120px;
-        }
+    &__icon {
+      font-size: 120px;
     }
+
+    &__word {
+      font-size: 80px;
+      margin-left: 170px;
+      padding-top: 20px; /* ? */
+      line-height: 120px;
+    }
+  }
 }
 
 .render {
-    display: none;
-}
-
-.hidden {
-    display: none;
+  display: none;
 }
